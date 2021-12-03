@@ -1,0 +1,10 @@
+1. installare ruby ( https://rubyinstaller.org/ )
+2. installare ansi-colors (con il comando "gem install ansi_colors")
+3. lanciare il comando " ruby run-tests.rb "java AppEs4" "
+
+N.b. Utilizzare una bash unix-like (come quella di Git) altrimenti lo script va in crash perchè non trova il comando -rm
+
+N.b. Se si vuole provare ad utilzzare l'algoritmo prototipo, all'interno di AppEs4.java alla riga 39 cambiare "g.algorithm..." in "g.algorithm2...", inoltre
+togliere il commetto alla riga 37 (al fine di costruire la camminata di eulero)
+
+P.s. la mia versione run-tests.rb è stata modificata dal prof. Esposito al fine di farla funzionare su SO Windows.

@@ -1,0 +1,52 @@
+per quanto riguarda l'esercizio2, non mi sono chiare due cose. Per quanto riguarda la variabile D no-op, qualora le due stringhe sono uguali (quindi s1[0]==s2[0] su ogni sottostringa rest(s1) e rest(s2) ), la variabile deve essere inizializzata a zero?
+Seconda domanda: come valore di ritorno, perchè dobbiamo ritornare il minimo tra(Dno.op, Dcanc, Dins) se vogliamo ritornare il numero totale di inserimenti e cancellazioni? Di conseguenza non capisco cosa deve effettivamente ritornare la funzione edit_distance.
+
+la no op dice che se non faccio niente, si devono esplorare le varie possibilità, nel caso in cui iniziino con lo stesso carattere, la distanza sarà quella tra le parti restanti tra le due stringhe.
+
+Se non faccio niente, e le due stringhe differiscono, allora la distanza è infinita.
+
+devo trovare l'edit distance m
+
+prima bisogna calcolare il valore di no-op, di canc e di ins
+il senso del secondo esercizio2 è come la prog dinamica puo dare dei notevoli benefici
+
+per quanto riguarda l'esercizio2, non mi sono chiare due cose. Per quanto riguarda la variabile D no-op, qualora le due stringhe sono uguali (quindi s1[0]==s2[0] su ogni sottostringa rest(s1) e rest(s2) ), la variabile deve essere inizializzata a zero?
+Seconda domanda: come valore di ritorno, perchè dobbiamo ritornare il minimo tra(Dno.op, Dcanc, Dins) se vogliamo ritornare il numero totale di inserimenti e cancellazioni? Di conseguenza non capisco cosa deve effettivamente ritornare la funzione edit_distance.
+da Diego Magro a tutti:
+un attimo, che recupero il testo...
+da Diego Magro a tutti:
+mi sentite?
+da Samuel Girardello a tutti:
+Si si
+da Letizia Gagliostro a tutti:
+si
+da Luca Bartoletti a tutti:
+sì la sentiamo
+da Bianca Deconcini a tutti:
+si
+da Marco Cavallo a tutti:
+si
+da Luca Giordanengo a tutti:
+si
+da Diego Magro a tutti:
+@Girardello: ho risposto alla sua domanda?
+da Samuel Girardello a tutti:
+Si la ho sentita, non mi è chiaro cosa significa "trovare la distanza minima", io ho già sviluppato l'algoritmo che trova il numero esatto di operazioni interessate ma non ho capito cosa si intende con minimo. Semplicemente io faccio ritornare il numero di inserimenti e cancellazioni necessarie per trasformare la stringa, non so se mi sono ben spiegato..
+da Samuel Girardello a tutti:
+Più o meno
+da Samuel Girardello a tutti:
+Ok. quindi deve essere un algoritmo che deve trovare le operazioni minime strettamente necessarie? l'algoritmo non deve quindi ""esplorare"" tutte le possibili strade anche se "inutili"? non so se mi sono ben spiegato... In sostanza, è sufficente trovare un algoritmo che calcola la min_edit_distance oppure un algoritmo molto più complesso che calcola qualsiasi strada possibile (quindi no-op, solo inserimenti, solo cancellazioni), e dopo fa un confronto con gli altri algoritmi e trova il risultato minimo? Perchè mi sembra strano fare solo inserimenti o solo cancellazioni, dato che la distanza minima è un mix delle due operazioni la maggior parte dei casi
+da Samuel Girardello a tutti:
+A me sembra una richiesta molto ovvia. Probabilmente io ho confuso min(no-op, inserimenti, cancellazioni) con un minimo tra le tre variabili, mentre in realtà si intende con la minima edit_distance semplicemente, non il minimo delle tre variabili. Per quanto riguarda le richieste implementative, mi sono estremamente chiare.
+da Luca Bartoletti a tutti:
+Non avendo ancora visto la programmazione dinamica può aver senso iniziare già ora sviluppare il secondo esercizio o consiglia di aspettare?
+da Luca Bartoletti a tutti:
+perfetto grazie mille, non mi era chiarissimo questo passaggio
+da Samuel Girardello a tutti:
+Ok. ora mi è piu chiaro. Quindi sono 3 praticamente le "strade" che deve provare a percorrere l'algoritmo, a partire dalla PRIMA operazione che si fa sulla stringa. L'algoritmo quindi prima tenta, per ognuna delle tre operazioni, di nuovo le strade no-op, ins e cancellazione.. quindi dato |n| come lunghezza della stringa più lunga delle due, le chiamate saranno n^3?  non so se sono stato chiaro capisco che sono domande "contorte"
+da Samuel Girardello a tutti:
+Ok. Benissimo... proverò a fare gli unit-test, se non risultano problemi, potrebbe andare bene quindi un algoritmo che non rispetti la richiesta di ritornare il minimo tra le tre variabili, ma che semplicemente "a colpo sicuro" calcola il numero di inserimenti e cancellazioni necessarie?  
+da Samuel Girardello a tutti:
+O questo creerebbe un problema quando dobbiamo implementarlo in modo dinamico?
+da Samuel Girardello a tutti:
+Ok, perfetto grazie! Certo capisco.. ho chiarito i miei dubbi, grazie mille
